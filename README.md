@@ -28,10 +28,9 @@ Here you will find:
 
 - **1. System Architecture**
     - [System Architecture (Data Flow, Security and so on)](./system-architecture/SYSTEM_ARCHITECTURE.md)
+    - [Hardware Fritzing Sketch](./system-architecture/assets/fritzing_schema.fzz)
 
 [//]: # (    - [Architecture Diagrams]&#40;./system-architecture/assets/&#41;)
-
-    - [Hardware Fritzing Sketch](./system-architecture/assets/fritzing_schema.fzz)
 
 - **2. Alpha Prototype**
 
