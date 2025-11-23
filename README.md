@@ -1,6 +1,8 @@
-# PROJECT NAME – Documentation
+# SafeAir – Documentation
 
-![Project Logo](./assets/logo.png)
+<p align="center">
+  <img src="./assets/logo.png" alt="SafeAir Logo">
+</p>
 
 > Comprehensive documentation for an IoT system with **hardware**, **backend web server**, and **mobile app**, including
 > cloud deployment, PubNub integration, and security.
@@ -28,6 +30,7 @@ Here you will find:
     - [System Architecture (Data Flow, Security and so on)](./system-architecture/SYSTEM_ARCHITECTURE.md)
 
 [//]: # (    - [Architecture Diagrams]&#40;./system-architecture/assets/&#41;)
+
     - [Hardware Fritzing Sketch](./system-architecture/assets/fritzing_schema.fzz)
 
 - **2. Alpha Prototype**
@@ -41,8 +44,10 @@ Here you will find:
 [//]: # (- **6. Backend Documentation**)
 
 [//]: # ()
+
 [//]: # (- **7. Hardware Documentation**)
 
 [//]: # ()
+
 [//]: # (- **8. Mobile App Documentation**)
 
