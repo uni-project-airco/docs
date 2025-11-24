@@ -26,17 +26,26 @@ In the diagram, this is the bottom path: sensor → PubNub → app.
 
 #### **2.Sending average values ​​to the Backend (every 10 minutes)**
 
-In addition to alert notifications, the sensor records data needed for history and analytics.
+In addition to alert notifications, the sensor also collects data needed for historical data and analytics.
 
-1. The sensor collects all measured data over 10 minutes.
-2. It then calculates the average value for each indicator: temperature, humidity, dust, CO₂, etc.
-3. The device sends these average values ​​to the backend via HTTPS every 10 minutes.
-4. The backend receives the information and verifies its accuracy.
-5. If the data is valid, the server stores it in MongoDB.
+1. The sensor accumulates all its measurements over 10 minutes.
+2. It then calculates average values ​​for each parameter: temperature, humidity, dust, CO₂, etc.
+3. The device then transmits this set of average values ​​to the backend via HTTPS.
+4. The backend receives the data and verifies that it is correct.
+5. If everything is correct, the server stores it in MongoDB.
 
 This part is shown on the top line of the diagram: 
 Sensors → HTTPS → Backend → MongoDB.
 The saved data is then used to display the history.
+
+#### **3.Receiving data for history**
+
+- When a user wants to view history, the application (frontend) sends a request to the backend via HTTPS.
+- The server receives this request, retrieves the stored data from MongoDB, and sends it back in JSON format.
+- The frontend receives the data and plots it.
+
+This process is shown in the upper-right arrow of the diagram:
+Frontend → HTTPS → Backend → Response with history.
 
 ## Hardware diagram
 <p align="center">
