@@ -1,0 +1,2 @@
++ Single Communication Channel:
+The system currently uses one predefined, hardcoded channel for transmitting alerts and telemetry updates. All data moves through a single controlled pathway. There for we do not have any additional security at this stage. In futere releases we will implement security certificates for authorizing connections to the channel.  
