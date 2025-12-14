@@ -47,6 +47,15 @@ The saved data is then used to display the history.
 This process is shown in the upper-right arrow of the diagram:
 Frontend → HTTPS → Backend → Response with history.
 
+
+#### **4.Send updated thresholds**
+
+1) When user updates thresholds, the mobile application sends a PubNub message to a sensor
+2) The sensor receives message and update saved thresholds
+3) Then sensor start using updated thresholds in telemetry calculations and alert logic
+
+
+
 ## Hardware diagram
 <p align="center">
     <img src="./assets/hardware-configuration-2.png">
