@@ -66,4 +66,3 @@ Frontend → HTTPS → Backend → Response with history.
 - Buzzer
 - Adafruit particle sensor PMSA003I 
 - Adafruit CO2 sensor SCD-41
-- Button
