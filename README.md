@@ -35,10 +35,13 @@ Here you will find:
 - **2. Alpha Prototype**
 
 - **3. Cloud Deployment (AWS)**
+    - [Hosting and CI/CD](https://github.com/uni-project-airco/docs/blob/39beb5e1d582e47c4709e7d4517f71d1b4e05eb5/deploy/deploy.md)
 
 - **4. PubNub Integration**
+    - [Communication](https://github.com/uni-project-airco/docs/blob/39beb5e1d582e47c4709e7d4517f71d1b4e05eb5/pubnub/Communication.md)
 
 - **5. Security**
+    - [Security](https://github.com/uni-project-airco/docs/tree/39beb5e1d582e47c4709e7d4517f71d1b4e05eb5/security)
 
 [//]: # (- **6. Backend Documentation**)
 
