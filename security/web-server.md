@@ -40,14 +40,9 @@ On top of that, Apache also enforces an HTTPS redirect internally, so the connec
 
 3. Only Minimal Ports Open on EC2
 
-Because SSM replaces SSH, our EC2 security group is extremely strict:
-
 Port 443 (HTTPS) → open to the public
 
-Port 80 (HTTP) → only for redirect to HTTPS
-
-No SSH (22)
-
+SSH for CI/CD, SSM for manual deployment;
 No other ports open at all
 
 This reduces the attack surface massively.
