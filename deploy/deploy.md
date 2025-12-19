@@ -22,16 +22,15 @@ name: Auto Deploy Flask on EC2
 on:
   push:
     branches: ["main"]
+    
 Runs automatically on every push to main.
 ------------------------------------------------------------------------------------------------------------------------------------
 What the workflow does
 1. Checkout the repository
    - uses: actions/checkout@v4
      
-------------------------------------------------------------------------------------------------------------------------------------
 2. Copy files to EC2
    - uses: appleboy/scp-action@v0.1.5
-------------------------------------------------------------------------------------------------------------------------------------
 
 3. Copies the entire repository to the EC2 server via SCP.
 
@@ -40,7 +39,7 @@ Files are placed in:
 /home/<SERVER_USER>/app
 Uses SSH credentials stored in GitHub secrets.
 ------------------------------------------------------------------------------------------------------------------------------------
-3. Deploy on EC2
+ Deploy on EC2
 - uses: appleboy/ssh-action@v1.1.0
   Connects to the EC2 instance and runs:
       cd /home/<SERVER_USER>/app
