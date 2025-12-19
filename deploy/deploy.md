@@ -11,8 +11,8 @@ Our domain, www.safe-air.org is managed through Cloudflare:
     • The domain points to the EC2 instance via Route 53 A records, behind Cloudflare
 This setup guarantees that users always access the site securely over HTTPS, and our backend remains hidden from direct public access.
 
-
 Github workflow
+-
 
 Auto Deploy Flask on EC2
 
@@ -20,11 +20,14 @@ This GitHub Actions workflow deploys a Flask app to an EC2 instance using Docker
 name: Auto Deploy Flask on EC2
 
 on:
-  push:
-    branches: ["main"]
+  - push:
+    - branches: ["main"]
     
 Runs automatically on every push to main.
+
 ------------------------------------------------------------------------------------------------------------------------------------
+
+
 What the workflow does
 1. Checkout the repository
    - uses: actions/checkout@v4
@@ -38,17 +41,19 @@ Files are placed in:
 
 /home/<SERVER_USER>/app
 Uses SSH credentials stored in GitHub secrets.
+
 ------------------------------------------------------------------------------------------------------------------------------------
  Deploy on EC2
+ -
 - uses: appleboy/ssh-action@v1.1.0
   Connects to the EC2 instance and runs:
-      cd /home/<SERVER_USER>/app
-      sudo docker compose up --build -d
+  -   cd /home/<SERVER_USER>/app
+  -   sudo docker compose up --build -d
   This rebuilds Docker images and restarts the containers in detached mode.
 
 ------------------------------------------------------------------------------------------------------------------------------------
 Required GitHub secrets
-
+-
 Set these in Settings → Secrets and variables → Actions:
 | Name             | Description                  |
 | ---------------- | ---------------------------- |
@@ -58,7 +63,7 @@ Set these in Settings → Secrets and variables → Actions:
 
 ------------------------------------------------------------------------------------------------------------------------------------
 EC2 requirements
-
+-
 The EC2 instance must have:
 
 1. Docker installed
